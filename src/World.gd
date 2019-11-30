@@ -1,7 +1,11 @@
 extends Node2D
 
+# in seconds
+const SPAWN_TIME = 10
+
 # Declare member variables here. Examples:
-var last = 0
+var lastSpawn = 0
+var curr = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,6 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if delta - last > 1.0:
+	curr += delta
+	if curr - lastSpawn > SPAWN_TIME:
 		print_debug("spawn enemy")
-		last = delta
+		lastSpawn = curr

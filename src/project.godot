@@ -19,8 +19,6 @@ config/name="Personal Space Invader"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
-config/icon="res://icon.png"
-
 [input]
 
 move_up_chase={
