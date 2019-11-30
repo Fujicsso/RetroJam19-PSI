@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gaja.png-dae8662a3af9d6ec8cd3b45b824db5b8.stex"
+path="res://.import/WalkBlondeBrown_2.png-3fd7d4c06b4f6299d9bc9db5187af5ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gaja.png"
-dest_files=[ "res://.import/gaja.png-dae8662a3af9d6ec8cd3b45b824db5b8.stex" ]
+source_file="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_2.png"
+dest_files=[ "res://.import/WalkBlondeBrown_2.png-3fd7d4c06b4f6299d9bc9db5187af5ad.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
