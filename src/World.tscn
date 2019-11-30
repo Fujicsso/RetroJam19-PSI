@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Gajo.gd" type="Script" id=1]
 [ext_resource path="res://gajo.png" type="Texture" id=2]
 [ext_resource path="res://pivot.gd" type="Script" id=3]
 [ext_resource path="res://Gaja.gd" type="Script" id=4]
 [ext_resource path="res://gaja.png" type="Texture" id=5]
+[ext_resource path="res://Ai.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 35.8187
@@ -16,7 +17,6 @@ radius = 35.5446
 position = Vector2( 569.883, 294.09 )
 
 [node name="Gajo" type="KinematicBody2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Gajo"]
@@ -43,17 +43,25 @@ script = ExtResource( 3 )
 position = Vector2( 141.913, -2.92609 )
 
 [node name="Gaja" type="KinematicBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 130, -52.0002 )
 script = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="Gaja"]
-position = Vector2( 0.209412, -0.0540619 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gaja"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gaja"]
 position = Vector2( -2.05035, 2.62067 )
 shape = SubResource( 2 )
 
-[node name="TileMap" type="TileMap" parent="."]
-format = 1
+[node name="Sprite2" type="Sprite" parent="Gaja"]
+position = Vector2( 1.79608, -1.64073 )
+texture = ExtResource( 5 )
+
+[node name="Ai" type="KinematicBody2D" parent="."]
+position = Vector2( 153.907, 87.267 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ai"]
+position = Vector2( -0.570801, -0.192703 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Ai"]
+position = Vector2( 4.8623, -1.28076 )
+texture = ExtResource( 5 )
