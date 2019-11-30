@@ -11,13 +11,3 @@ func _ready():
 	$Minimap/Viewport.world_2d = viewport1.world_2d
 	camera1.target = world.get_node("Gajo")
 	camera2.target = world.get_node("Gaja")
-#	set_camera_limits()
-
-#func set_camera_limits():
-#	var map_limits = world.get_used_rect()
-#	var map_cellsize = world.cell_size
-#	for cam in [camera1, camera2]:
-#		cam.limit_left = map_limits.position.x * map_cellsize.x
-#		cam.limit_right = map_limits.end.x * map_cellsize.x
-#		cam.limit_top = map_limits.position.y * map_cellsize.y
-#		cam.limit_bottom = map_limits.end.y * map_cellsize.y
