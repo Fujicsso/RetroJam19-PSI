@@ -1,7 +1,7 @@
 
 extends KinematicBody2D
 
-const MOVE_SPEED = 250
+const MOVE_SPEED = 180
 const TURN_ANGLE = PI / 64
 var look_direction = Vector2(1, 0);
 
