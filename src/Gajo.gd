@@ -25,8 +25,11 @@ func _physics_process(delta):
 
 	move_vec = Vector2(speed * cos(angle), speed * sin(angle))
 	move_vec = move_vec.normalized()
-	move_and_collide(move_vec * MOVE_SPEED * delta)
-	global_rotation = angle
+	if move_and_collide(move_vec * MOVE_SPEED * delta) == null:
+		global_rotation = angle
+	else:
+		global_rotation = angle
 
 func kill():
-	get_tree().reload_current_scene()
+	if get_tree().reload_current_scene() != null:
+		print("Oof")
