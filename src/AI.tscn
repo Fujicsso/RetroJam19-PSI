@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://AI.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_7.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_0.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/personal-space.png" type="Texture" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.12177
@@ -22,6 +23,12 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="CanvasItemMaterial" id=3]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 16.5189
+height = 31.9948
+
 [node name="AI" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -31,3 +38,15 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "chase-anim"
+
+[node name="body" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+material = SubResource( 3 )
+shape = SubResource( 4 )
+one_way_collision_margin = 0.0
+
+[node name="Sprite" type="Sprite" parent="body"]
+position = Vector2( 0.126877, 0.173098 )
+scale = Vector2( 0.179698, 0.152212 )
+texture = ExtResource( 10 )
