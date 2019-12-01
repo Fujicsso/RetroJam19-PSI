@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://GameOverSprite.png" type="Texture" id=2]
 [ext_resource path="res://RestartButton.gd" type="Script" id=3]
+[ext_resource path="res://MusicGameOver.gd" type="Script" id=4]
 
 [node name="GameOverScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -46,4 +47,9 @@ rect_scale = Vector2( 2.42176, 2.76852 )
 rect_pivot_offset = Vector2( 79.9182, 13.3808 )
 custom_colors/font_color = Color( 0.517647, 0.235294, 0.235294, 1 )
 text = "Quit"
+
+[node name="Music" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
