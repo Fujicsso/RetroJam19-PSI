@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alert sound security final with reverb.wav-51f4852711cb192feacc482f8226d553.sample"
+
+[deps]
+
+source_file="res://Music&SndEffects/alert sound security final with reverb.wav"
+dest_files=[ "res://.import/alert sound security final with reverb.wav-51f4852711cb192feacc482f8226d553.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

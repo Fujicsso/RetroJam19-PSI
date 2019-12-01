@@ -1,6 +1,9 @@
 extends Node2D
 
+onready var musicPlayer = get_node("../../../../Music")
+
 # in seconds
+<<<<<<< HEAD
 const SPAWN_TIME = 10
 const CHASE_COOLDOWN = 10
 const RUN_COOLDOWN = 10
@@ -16,6 +19,10 @@ var run_available = true
 var run_ability = false
 var run_last_used = 0
 var run_ability_pos = Vector2()
+=======
+const SPAWN_TIME = 4
+const GLASS_CLINCK_TIME = 10
+>>>>>>> 4a95b187d4585fe941a3a486e9ad8e28b037ba68
 
 enum worldEvent {
 	DEFAULT,
@@ -91,24 +98,33 @@ const secondEvent = worldEvent.GROOVY_TIME
 func event_handler():
 	match worldState:
 		worldEvent.DEFAULT:
-			if total > 5 && total < 15:
+			if total > 20 && total < 30:
+				musicPlayer.changeMusic(musicPlayer.musicEvent.HAPPY_HOUR)
 				worldState = firstEvent
-			elif(total > 25 && total < 40):
+			elif(total > 40 && total < 60):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.GROOVY_TIME)
 				worldState = secondEvent
-			elif(total > 50 && total < 65):
+			elif(total > 75 && total < 82):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.CLOSING_HOUR)
 				worldState = worldEvent.CLOSING_HOUR
-		firstEvent:
-			if(total > 15):
+		firstEvent: # happy hour
+			if(total > 30):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.DEFAULT)
 				worldState = worldEvent.DEFAULT
-		secondEvent:
-			if(total > 40):
+		secondEvent: # groovy time
+			if(total > 60):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.DEFAULT)
 				worldState = worldEvent.DEFAULT
 		worldEvent.CLOSING_HOUR:
-			if(total > 65):
+			if(total > 82):
 				worldState = worldEvent.END
+		worldEvent.END:
+			get_tree().change_scene("res://GameOverScreen.tscn")
+			worldState = worldEvent.DEFAULT
 
 # Declare member variables here. Examples:
 var lastSpawn = 0
+var glassClickTimer = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -117,8 +133,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	total += delta
+	glassClickTimer += delta
+	
+	if glassClickTimer > GLASS_CLINCK_TIME:
+		get_node("./SoundEffects").playGlassClincking()
+		glassClickTimer = 0
+		
 	event_handler()
-	#print(total ,  ' ----  ' ,  worldState)
 	if total - lastSpawn > SPAWN_TIME:
-		print_debug("spawn enemy")
 		lastSpawn = total

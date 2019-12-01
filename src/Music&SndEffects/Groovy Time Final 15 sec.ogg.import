@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Groovy Time Final 15 sec.ogg-7bf236036ec850f26caa876fe2bbb42b.oggstr"
+
+[deps]
+
+source_file="res://Music&SndEffects/Groovy Time Final 15 sec.ogg"
+dest_files=[ "res://.import/Groovy Time Final 15 sec.ogg-7bf236036ec850f26caa876fe2bbb42b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

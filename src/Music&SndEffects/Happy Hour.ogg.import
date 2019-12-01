@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Happy Hour.ogg-2423cfb8b5e66df2f5c8b5236ecf9ea9.oggstr"
+
+[deps]
+
+source_file="res://Music&SndEffects/Happy Hour.ogg"
+dest_files=[ "res://.import/Happy Hour.ogg-2423cfb8b5e66df2f5c8b5236ecf9ea9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

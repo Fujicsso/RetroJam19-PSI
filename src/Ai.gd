@@ -2,9 +2,15 @@ extends KinematicBody2D
 
 onready var world = get_parent()
 
+<<<<<<< HEAD
 const BAR_TIME = 5
 const MOVE_SPEED = 150
 const ABILITY_RADIUS = 500
+=======
+const BAR_TIME = 2
+const MOVE_SPEED = 200
+const MAX_TIME_COL_GAJO = 3 # 3 secs for game over
+>>>>>>> 4a95b187d4585fe941a3a486e9ad8e28b037ba68
 # const TURN_ANGLE = PI / 64
 
 var goingToBar = false
@@ -13,6 +19,11 @@ var returningFromBar = false
 var reachedBar = 0
 var totalTime = 0
 var sinceLastEvent = 0
+<<<<<<< HEAD
+=======
+var timeCollindingWithGajo = 0
+
+>>>>>>> 4a95b187d4585fe941a3a486e9ad8e28b037ba68
 
 # Declare member variables here. Examples:
 var angle = PI / 2
@@ -42,8 +53,13 @@ func _calc_bar_position(player_position):
 		return bar.get_position()
 
 
-func _normal_action(delta):
+func _check_colliding_with_gajo(delta):
+	timeCollindingWithGajo += delta
+	if timeCollindingWithGajo > MAX_TIME_COL_GAJO:
+		world.worldState = world.worldEvent.END
 
+
+func _normal_action(delta):
 	var player_position = null
 	var Move = Vector2()
 	var self_position = null
@@ -75,7 +91,6 @@ func _normal_action(delta):
 
 	else:
 		if sinceLastEvent > 5:
-			print("XEG")
 			sinceLastEvent = 0
 			var chance = randi() % 101 + 1
 			# 20 for debugging, around 5 when final
@@ -116,8 +131,13 @@ func _physics_process(delta):
 				Move =  player_position - self_position
 				Move = Move.normalized()
 				global_rotation = Move.angle()
+<<<<<<< HEAD
 				move_and_collide(Move * MOVE_SPEED * delta)
 				return
+=======
+				move_and_collide(Move * speed * delta)
+				_check_colliding_with_gajo(delta)
+>>>>>>> 4a95b187d4585fe941a3a486e9ad8e28b037ba68
 	
 	player_position = self.get_position()
 	var target = world.get_ability(player_position, ABILITY_RADIUS)
@@ -128,10 +148,14 @@ func _physics_process(delta):
 
 	elif world.closing_hour():
 		goingToBar = true
-		bar_position = Vector2(0, 0)
+		bar_position = Vector2(0, 1000)
 		_normal_action(delta)
 
+<<<<<<< HEAD
 	elif world.groovy_time():
+=======
+	if world.groovy_time():
+>>>>>>> 4a95b187d4585fe941a3a486e9ad8e28b037ba68
 		goingToBar = true
 		bar_position = Vector2(0, 0)
 		_normal_action(delta)

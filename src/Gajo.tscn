@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Gajo.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_2.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_3.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_4.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_5.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_6.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_7.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_0.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/AI/Random_AI/WalkingAIBlondeBrown/WalkBlondeBrown_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_7.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_6.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_5.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Players/Male/Chaser/ChaserPurpleBrownGlasses_3.png" type="Texture" id=9]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.12177
@@ -25,9 +25,19 @@ animations = [ {
 [node name="Gajo" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
+[node name="body" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="body"]
+frames = SubResource( 2 )
+animation = "New Anim"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "chase-anim"
+animation = "New Anim"

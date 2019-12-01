@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pop up bubble.wav-a2fb524a70d7b27172889b662281fa6a.sample"
+
+[deps]
+
+source_file="res://Music&SndEffects/pop up bubble.wav"
+dest_files=[ "res://.import/pop up bubble.wav-a2fb524a70d7b27172889b662281fa6a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
