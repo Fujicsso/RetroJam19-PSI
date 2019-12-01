@@ -3,8 +3,7 @@ extends Node2D
 onready var musicPlayer = get_node("../../../../Music")
 
 # in seconds
-<<<<<<< HEAD
-const SPAWN_TIME = 10
+
 const CHASE_COOLDOWN = 10
 const RUN_COOLDOWN = 10
 const CHASE_DURATION = 5
@@ -19,10 +18,9 @@ var run_available = true
 var run_ability = false
 var run_last_used = 0
 var run_ability_pos = Vector2()
-=======
+
 const SPAWN_TIME = 4
 const GLASS_CLINCK_TIME = 10
->>>>>>> 4a95b187d4585fe941a3a486e9ad8e28b037ba68
 
 enum worldEvent {
 	DEFAULT,
