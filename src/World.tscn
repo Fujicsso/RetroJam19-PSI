@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Sprites/Walls/wallTopLeft.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Walls/wallTop.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Gaja.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Gajo.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Bar.tscn" type="PackedScene" id=30]
+[ext_resource path="res://SoundEffects.gd" type="Script" id=31]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -323,7 +324,6 @@ animations = [ {
 } ]
 
 [node name="World" type="TileMap"]
-editor/display_folded = true
 position = Vector2( 525.823, 305.243 )
 tile_set = SubResource( 9 )
 cell_size = Vector2( 32, 32 )
@@ -440,3 +440,8 @@ position = Vector2( 512.639, 367.05 )
 
 [node name="Bar4" parent="." instance=ExtResource( 30 )]
 position = Vector2( -539.297, 383.454 )
+
+[node name="SoundEffects" type="Node2D" parent="."]
+script = ExtResource( 31 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SoundEffects"]

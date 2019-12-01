@@ -3,7 +3,8 @@ extends Node2D
 onready var musicPlayer = get_node("../../../../Music")
 
 # in seconds
-const SPAWN_TIME = 10
+const SPAWN_TIME = 4
+const GLASS_CLINCK_TIME = 10
 
 enum worldEvent {
 	DEFAULT,
@@ -62,6 +63,7 @@ func event_handler():
 
 # Declare member variables here. Examples:
 var lastSpawn = 0
+var glassClickTimer = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -70,6 +72,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	total += delta
+	glassClickTimer += delta
+	
+	if glassClickTimer > GLASS_CLINCK_TIME:
+		get_node("./SoundEffects").playGlassClincking()
+		glassClickTimer = 0
+		
 	event_handler()
 	if total - lastSpawn > SPAWN_TIME:
 		lastSpawn = total
