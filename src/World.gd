@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var musicPlayer = get_node("../../../../Music")
+
 # in seconds
 const SPAWN_TIME = 10
 
@@ -35,16 +37,21 @@ func event_handler():
 	match worldState:
 		worldEvent.DEFAULT:
 			if total > 5 && total < 15:
+				musicPlayer.changeMusic(musicPlayer.musicEvent.HAPPY_HOUR)
 				worldState = firstEvent
 			elif(total > 25 && total < 40):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.GROOVY_TIME)
 				worldState = secondEvent
 			elif(total > 50 && total < 65):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.CLOSING_HOUR)
 				worldState = worldEvent.CLOSING_HOUR
-		firstEvent:
+		firstEvent: # happy hour
 			if(total > 15):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.DEFAULT)
 				worldState = worldEvent.DEFAULT
-		secondEvent:
+		secondEvent: # groovy time
 			if(total > 40):
+				musicPlayer.changeMusic(musicPlayer.musicEvent.DEFAULT)
 				worldState = worldEvent.DEFAULT
 		worldEvent.CLOSING_HOUR:
 			if(total > 65):
@@ -64,7 +71,5 @@ func _ready():
 func _process(delta):
 	total += delta
 	event_handler()
-	#print(total ,  ' ----  ' ,  worldState)
 	if total - lastSpawn > SPAWN_TIME:
-		print_debug("spawn enemy")
 		lastSpawn = total

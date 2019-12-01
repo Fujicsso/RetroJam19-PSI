@@ -129,9 +129,9 @@ func _physics_process(delta):
 	
 	if world.worldState == world.worldEvent.CLOSING_HOUR:
 		goingToBar = true
-		bar_position = Vector2(0, 0)
+		bar_position = Vector2(0, 1000)
 		_normal_action(delta)
-#
+
 	if world.groovy_time():
 		goingToBar = true
 		bar_position = Vector2(0, 0)
