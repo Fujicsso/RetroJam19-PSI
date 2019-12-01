@@ -1,4 +1,6 @@
-Repository hosting the game (still in progress) developed for RetroJam19. The theme of the game jam was "Space", and the name of the game is "Personal Space Invader".
+Repository hosting the game (still in progress) developed for RetroJam2019. The theme of the game jam was "Space", and the name of the game is "Personal Space Invader".
+
+The game was developed using the game engine Godot, and programmed in the engine's standard language GDScript.
 
 The team:
 
