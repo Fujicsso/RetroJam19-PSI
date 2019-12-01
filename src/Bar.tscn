@@ -1,0 +1,290 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://Sprites/Walls/wallBottom.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Walls/wallBottomLeft.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Walls/wallBottomRight.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Walls/wallLeft.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Walls/wallRight.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Walls/wallTop.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Walls/wallTopLeft.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Walls/wallTopRight.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Floor/Floor_00.png" type="Texture" id=9]
+[ext_resource path="res://Barista.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/AI/Barista/Barista_00.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/AI/Barista/Barista_01.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/AI/Barista/Barista_02.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/AI/Barista/Barista_03.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/AI/Barista/Barista_04.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/AI/Barista/Barista_05.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/AI/Barista/Barista_06.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/AI/Barista/Barista_07.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/AI/Barista/Barista_08.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/AI/Barista/Barista_09.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/AI/Barista/Barista_10.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/AI/Barista/Barista_11.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/AI/Barista/Barista_12.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/AI/Barista/Barista_13.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/AI/Barista/Barista_14.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/AI/Barista/Barista_15.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/AI/Barista/Barista_16.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/AI/Barista/Barista_17.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/AI/Barista/Barista_18.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/AI/Barista/Barista_19.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/AI/Barista/Barista_20.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/AI/Barista/Barista_21.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/AI/Barista/Barista_22.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/AI/Barista/Barista_23.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/AI/Barista/Barista_24.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/AI/Barista/Barista_25.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/AI/Barista/Barista_26.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/AI/Barista/Barista_27.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/AI/Barista/Barista_28.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/AI/Barista/Barista_29.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/AI/Barista/Barista_30.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/AI/Barista/Barista_31.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/AI/Barista/Barista_32.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/AI/Barista/Barista_33.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/AI/Barista/Barista_34.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/AI/Barista/Barista_35.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/AI/Barista/Barista_36.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/AI/Barista/Barista_37.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/AI/Barista/Barista_38.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/AI/Barista/Barista_39.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/AI/Barista/Barista_40.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/AI/Barista/Barista_41.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/AI/Barista/Barista_42.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/AI/Barista/Barista_43.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/AI/Barista/Barista_44.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/AI/Barista/Barista_45.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/AI/Barista/Barista_46.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/AI/Barista/Barista_47.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/AI/Barista/Barista_48.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/AI/Barista/Barista_49.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/AI/Barista/Barista_50.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/AI/Barista/Barista_51.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/AI/Barista/Barista_52.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/AI/Barista/Barista_53.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/AI/Barista/Barista_54.png" type="Texture" id=65]
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=22]
+0/name = "wallBottom.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "wallBottomLeft.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "wallBottomRight.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "wallLeft.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "wallRight.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "wallTop.png 5"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "wallTopLeft.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "wallTopRight.png 7"
+7/texture = ExtResource( 8 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Floor_00.png 8"
+8/texture = ExtResource( 9 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "pour-up",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=24]
+
+[node name="Bar" type="Node2D"]
+
+[node name="BarBounds" type="TileMap" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+tile_set = SubResource( 22 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -589845, 6, 0, -589844, 5, 0, -589843, 5, 0, -589842, 5, 0, -589841, 5, 0, -589840, 5, 0, -589839, 5, 0, -589838, 5, 0, -589837, 7, 0, -524309, 3, 0, -524308, 8, 0, -524307, 8, 0, -524306, 8, 0, -524305, 8, 0, -524304, 8, 0, -524303, 8, 0, -524302, 8, 0, -524301, 4, 0, -458773, 1, 0, -458772, 0, 0, -458771, 0, 0, -458770, 0, 0, -458769, 0, 0, -458768, 0, 0, -458767, 0, 0, -458766, 0, 0, -458765, 2, 0, -262147, 8, 0 )
+
+[node name="Barista" type="KinematicBody2D" parent="."]
+position = Vector2( -619.403, -272.651 )
+script = ExtResource( 10 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Barista"]
+position = Vector2( 0.950043, 2.84999 )
+frames = SubResource( 23 )
+animation = "pour-up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barista"]
+rotation = 1.5708
+shape = SubResource( 24 )
