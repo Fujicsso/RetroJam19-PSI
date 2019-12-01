@@ -2,8 +2,9 @@ extends KinematicBody2D
 
 onready var world = get_parent()
 
-const BAR_TIME = 2
-const MOVE_SPEED = 200
+const BAR_TIME = 5
+const MOVE_SPEED = 150
+const ABILITY_RADIUS = 500
 # const TURN_ANGLE = PI / 64
 
 var goingToBar = false
@@ -13,14 +14,11 @@ var reachedBar = 0
 var totalTime = 0
 var sinceLastEvent = 0
 
-
-
 # Declare member variables here. Examples:
 var angle = PI / 2
 var reverse = 1
 var time = 0
-var lastMoveAngle = null
-var speed = 150
+# var lastMoveAngle = null
 var bar_position = Vector2()
 var init_position = Vector2()
 
@@ -52,7 +50,6 @@ func _normal_action(delta):
 	
 	if goingToBar:
 		player_position = self.get_position()
-		var distance = player_position.distance_to(bar_position)
 		Move = bar_position - player_position
 		Move = Move.normalized()
 		global_rotation = Move.angle()
@@ -62,7 +59,7 @@ func _normal_action(delta):
 			atBar = true
 
 	elif atBar:
-		if totalTime - reachedBar > 5:
+		if totalTime - reachedBar > BAR_TIME:
 			atBar = false
 			returningFromBar = true
 
@@ -119,15 +116,22 @@ func _physics_process(delta):
 				Move =  player_position - self_position
 				Move = Move.normalized()
 				global_rotation = Move.angle()
-				move_and_collide(Move * speed * delta)
+				move_and_collide(Move * MOVE_SPEED * delta)
 				return
 	
-	if world.worldState == world.worldEvent.CLOSING_HOUR:
+	player_position = self.get_position()
+	var target = world.get_ability(player_position, ABILITY_RADIUS)
+	if target != null:
+		returningFromBar = false
+		bar_position = target
+		_normal_action(delta)
+
+	elif world.closing_hour():
 		goingToBar = true
 		bar_position = Vector2(0, 0)
 		_normal_action(delta)
-#
-	if world.groovy_time():
+
+	elif world.groovy_time():
 		goingToBar = true
 		bar_position = Vector2(0, 0)
 		_normal_action(delta)

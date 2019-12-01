@@ -18,7 +18,7 @@
 [ext_resource path="res://Sprites/OtherAssets/Coluna/coluna_15.png" type="Texture" id=16]
 [ext_resource path="res://Coluna.gd" type="Script" id=17]
 
-[sub_resource type="SpriteFrames" id=11]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
@@ -31,70 +31,70 @@ animations = [ {
 [node name="Coluna" type="AnimatedSprite" parent="."]
 position = Vector2( -646.552, -412.622 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna2" type="AnimatedSprite" parent="."]
 position = Vector2( -503.402, -412.622 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna3" type="AnimatedSprite" parent="."]
 position = Vector2( -356.382, -414.944 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna4" type="AnimatedSprite" parent="."]
 position = Vector2( -214.78, -415.718 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna5" type="AnimatedSprite" parent="."]
 position = Vector2( -70.082, -415.718 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna6" type="AnimatedSprite" parent="."]
 position = Vector2( 73.842, -414.17 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna7" type="AnimatedSprite" parent="."]
 position = Vector2( 217.766, -413.396 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna8" type="AnimatedSprite" parent="."]
 position = Vector2( 360.916, -413.396 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna9" type="AnimatedSprite" parent="."]
 position = Vector2( 506.388, -414.17 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
 [node name="Coluna10" type="AnimatedSprite" parent="."]
 position = Vector2( 649.538, -414.944 )
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -102,7 +102,7 @@ script = ExtResource( 17 )
 position = Vector2( -733.216, -328.28 )
 rotation = -1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -110,7 +110,7 @@ script = ExtResource( 17 )
 position = Vector2( -733.216, -182.525 )
 rotation = -1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -118,7 +118,7 @@ script = ExtResource( 17 )
 position = Vector2( -733.216, -40.2005 )
 rotation = -1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -126,7 +126,7 @@ script = ExtResource( 17 )
 position = Vector2( -733.216, 103.839 )
 rotation = -1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -134,7 +134,7 @@ script = ExtResource( 17 )
 position = Vector2( -734.073, 248.736 )
 rotation = -1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -142,7 +142,7 @@ script = ExtResource( 17 )
 position = Vector2( -734.931, 394.491 )
 rotation = -1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -150,7 +150,7 @@ script = ExtResource( 17 )
 position = Vector2( 738.901, -342.506 )
 rotation = 1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -158,7 +158,7 @@ script = ExtResource( 17 )
 position = Vector2( 738.901, -199.897 )
 rotation = 1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -166,7 +166,7 @@ script = ExtResource( 17 )
 position = Vector2( 738.166, -53.6132 )
 rotation = 1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -174,7 +174,7 @@ script = ExtResource( 17 )
 position = Vector2( 737.431, 88.2603 )
 rotation = 1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -182,7 +182,7 @@ script = ExtResource( 17 )
 position = Vector2( 738.166, 232.339 )
 rotation = 1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )
 
@@ -190,6 +190,6 @@ script = ExtResource( 17 )
 position = Vector2( 736.695, 376.418 )
 rotation = 1.5708
 scale = Vector2( 2.68782, 2.85064 )
-frames = SubResource( 11 )
+frames = SubResource( 1 )
 animation = "beat"
 script = ExtResource( 17 )

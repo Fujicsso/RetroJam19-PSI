@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+onready var world = get_parent()
+
 const MOVE_SPEED = 180
 const TURN_ANGLE = PI / 64
 var look_direction = Vector2(1, 0);
@@ -30,6 +32,9 @@ func _physics_process(delta):
 		angle -= TURN_ANGLE
 	if Input.is_action_pressed("move_right_run"):
 		angle += TURN_ANGLE
+	
+	if Input.is_action_just_pressed("run_ability"):
+		world.use_chase_ability(self.get_position())
 
 	move_vec = Vector2(speed * cos(angle), speed * sin(angle))
 	move_vec = move_vec.normalized()

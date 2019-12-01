@@ -2,6 +2,20 @@ extends Node2D
 
 # in seconds
 const SPAWN_TIME = 10
+const CHASE_COOLDOWN = 10
+const RUN_COOLDOWN = 10
+const CHASE_DURATION = 5
+const RUN_DURATION = 5
+
+var chase_available = true
+var chase_ability = false
+var chase_last_used = 0
+var chase_ability_pos = Vector2()
+
+var run_available = true
+var run_ability = false
+var run_last_used = 0
+var run_ability_pos = Vector2()
 
 enum worldEvent {
 	DEFAULT,
@@ -14,19 +28,62 @@ enum worldEvent {
 var worldState = worldEvent.DEFAULT
 var total = 0
 
-const startOfEvents = 5
+func use_chase_ability(position):
+	if chase_available:
+		chase_available = false
+		chase_ability = true
+		chase_last_used = total
+		chase_ability_pos = position
+
+func use_run_ability(position):
+	if run_available:
+		run_available = false
+		run_ability = true
+		run_last_used = total
+		run_ability_pos = position
+
+func check_abilities():
+	if total - chase_last_used > CHASE_DURATION:
+		chase_ability = false
+	if total - chase_last_used > CHASE_DURATION + CHASE_COOLDOWN:
+		chase_available = true
+	if total - run_last_used > RUN_DURATION:
+		run_ability = false
+	if total - run_last_used > RUN_DURATION + RUN_COOLDOWN:
+		run_available = true
+
+func within_radius(pos1, pos2, rad):
+	return pos1.distance_to(pos2) < rad
+
+func get_ability(player_position, radius):
+	check_abilities()
+	if chase_ability and not run_ability and within_radius(player_position, chase_ability_pos, radius):
+		return chase_ability_pos
+	elif run_ability and not chase_ability and within_radius(player_position, run_ability_pos, radius):
+		return run_ability_pos
+	elif chase_ability and run_ability:
+		if within_radius(player_position, chase_ability_pos, radius) and within_radius(player_position, run_ability_pos, radius):
+			if run_last_used > chase_last_used:
+				return run_ability_pos
+			else:
+				return chase_ability_pos
+		elif within_radius(player_position, chase_ability_pos, radius):
+			return chase_ability_pos
+		elif within_radius(player_position, run_ability_pos, radius):
+			return run_ability_pos
+		else:
+			return null
+	else:
+		return null
 
 func groovy_time():
-	if worldState == worldEvent.GROOVY_TIME:
-		return true
-	else:
-		return false
+	return worldState == worldEvent.GROOVY_TIME
 
 func happy_hour():
-	if worldState == worldEvent.HAPPY_HOUR:
-		return true
-	else:
-		return false
+	return worldState == worldEvent.HAPPY_HOUR
+
+func closing_hour():
+	return worldState == worldEvent.CLOSING_HOUR
 
 const firstEvent = worldEvent.HAPPY_HOUR
 const secondEvent = worldEvent.GROOVY_TIME
