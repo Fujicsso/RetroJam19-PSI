@@ -37,8 +37,6 @@ func _physics_process(delta):
 	move_vec = move_vec.normalized()
 	move_and_collide(move_vec * MOVE_SPEED * delta)
 	look_direction = Vector2(cos(angle), sin(angle))
-	print(self.get_position())
-#	print(look_direction)
 	global_rotation = angle
 
 func kill():
