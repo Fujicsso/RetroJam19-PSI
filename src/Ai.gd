@@ -2,14 +2,13 @@ extends KinematicBody2D
 
 onready var world = get_parent()
 
-const bar_position = Vector2(-200, -20)
-# onready const bar_position = world.bar.position
-
 const BAR_TIME = 2
 const MOVE_SPEED = 200
 # const TURN_ANGLE = PI / 64
 
 var goingToBar = false
+var atBar = false
+var returningFromBar = false
 var reachedBar = 0
 var totalTime = 0
 var sinceLastEvent = 0
@@ -22,19 +21,24 @@ var reverse = 1
 var time = 0
 var lastMoveAngle = null
 var speed = 150
+var bar_position = Vector2()
+var init_position = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	init_position = self.get_position()
 	set_physics_process(true)
 
 
-func _physics_process(delta):
+func _normal_action(delta):
 	var player_position = null
 	var Move = Vector2()
 	var self_position = null
 	var body = get_node("body").get_overlapping_bodies()
+	
+	
 	sinceLastEvent += delta
-    
+	totalTime += delta
 	time += delta
 	
 	if body.size() != 0:
@@ -50,21 +54,38 @@ func _physics_process(delta):
 				if goingToBar:
 					player_position = self.get_position()
 					var distance = player_position.distance_to(bar_position)
-					if distance < 10:
-						reachedBar = totalTime
-						goingToBar = false
 					Move = bar_position - player_position
 					Move = Move.normalized()
-					move_and_collide(Move)
-			
+					global_rotation = Move.angle()
+					if move_and_collide(Move) != null:
+						reachedBar = totalTime
+						goingToBar = false
+						atBar = true
+				
+				elif atBar:
+					if totalTime - reachedBar > 5:
+						atBar = false
+						returningFromBar = true
+						
+				elif returningFromBar:
+					player_position = self.get_position()
+					
+					if player_position.distance_to(init_position) < 5:
+						returningFromBar = false
+					else:
+						Move = init_position - player_position
+						Move = Move.normalized()
+						move_and_collide(Move)
+						global_rotation = Move.angle()
+
 				else:
 					if sinceLastEvent > 5:
 						sinceLastEvent = 0
 						var chance = randi() % 101 + 1
-						if chance <= 5:
+						if chance <= 25:
+							print("entrei aqui")
 							goingToBar = true
 							player_position = self.get_position()
-							var bar_position = Vector2()
 							if player_position.x < 0 and player_position.y < 0:
 								var bar = get_node("../Bar")
 								bar_position = bar.get_position()
@@ -78,6 +99,7 @@ func _physics_process(delta):
 								var bar = get_node("../Bar4")
 								bar_position = bar.get_position()
 							print(bar_position)
+
 				if(time > 0.5):
 					time = 0
 					if(reverse == -1):
@@ -91,7 +113,14 @@ func _physics_process(delta):
 #				else:
 				angle += reverse*(PI/4) * delta * 1.5
 				global_rotation = angle
-	
+
+func _physics_process(delta):
+	if world.groovyTime():
+		pass
+	elif world.happyHour():
+		pass
+	else:
+		_normal_action(delta)
 
 func kill():
 	get_tree().reload_current_scene()
