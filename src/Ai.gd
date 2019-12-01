@@ -4,6 +4,7 @@ onready var world = get_parent()
 
 const BAR_TIME = 2
 const MOVE_SPEED = 200
+const MAX_TIME_COL_GAJO = 3 # 3 secs for game over
 # const TURN_ANGLE = PI / 64
 
 var goingToBar = false
@@ -12,7 +13,7 @@ var returningFromBar = false
 var reachedBar = 0
 var totalTime = 0
 var sinceLastEvent = 0
-
+var timeCollindingWithGajo = 0
 
 
 # Declare member variables here. Examples:
@@ -44,8 +45,13 @@ func _calc_bar_position(player_position):
 		return bar.get_position()
 
 
-func _normal_action(delta):
+func _check_colliding_with_gajo(delta):
+	timeCollindingWithGajo += delta
+	if timeCollindingWithGajo > MAX_TIME_COL_GAJO:
+		world.worldState = world.worldEvent.END
 
+
+func _normal_action(delta):
 	var player_position = null
 	var Move = Vector2()
 	var self_position = null
@@ -78,7 +84,6 @@ func _normal_action(delta):
 
 	else:
 		if sinceLastEvent > 5:
-			print("XEG")
 			sinceLastEvent = 0
 			var chance = randi() % 101 + 1
 			# 20 for debugging, around 5 when final
@@ -120,7 +125,7 @@ func _physics_process(delta):
 				Move = Move.normalized()
 				global_rotation = Move.angle()
 				move_and_collide(Move * speed * delta)
-				return
+				_check_colliding_with_gajo(delta)
 	
 	if world.worldState == world.worldEvent.CLOSING_HOUR:
 		goingToBar = true

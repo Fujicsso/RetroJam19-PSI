@@ -1,5 +1,6 @@
-
 extends KinematicBody2D
+
+onready var world = get_parent()
 
 const MOVE_SPEED = 180
 const TURN_ANGLE = PI / 64
@@ -14,6 +15,11 @@ func _ready():
 	$AnimatedSprite.play("chase-anim")
 
 func _physics_process(delta):
+	var body = get_node("body").get_overlapping_bodies()
+	if body.size() != 0:
+		for tinge in body:
+			if tinge.is_in_group("Gaja"):
+				world.worldState = world.worldEvent.END
 	
 	var move_vec = Vector2()
 	if Input.is_action_pressed("move_up_chase"):

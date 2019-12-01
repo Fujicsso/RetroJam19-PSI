@@ -49,6 +49,9 @@ func event_handler():
 		worldEvent.CLOSING_HOUR:
 			if(total > 65):
 				worldState = worldEvent.END
+		worldEvent.END:
+			get_tree().change_scene("res://GameOverScreen.tscn")
+			worldState = worldEvent.DEFAULT
 
 # Declare member variables here. Examples:
 var lastSpawn = 0
