@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RunnerRedBrown_2.png-ad592dd17a19ae4ceb65301c90ded4d6.stex"
+path="res://.import/RunnerBlueBrownPin_3.png-f5cc2748d9f18adceb1a7f5a0585d59f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Players/Female/Runner/RunnerRedBrown_2.png"
-dest_files=[ "res://.import/RunnerRedBrown_2.png-ad592dd17a19ae4ceb65301c90ded4d6.stex" ]
+source_file="res://Sprites/Players/Female/Runner/RunnerBlueBrownPin_3.png"
+dest_files=[ "res://.import/RunnerBlueBrownPin_3.png-f5cc2748d9f18adceb1a7f5a0585d59f.stex" ]
 
 [params]
 
