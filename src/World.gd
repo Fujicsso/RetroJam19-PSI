@@ -36,25 +36,25 @@ const secondEvent = worldEvent.GROOVY_TIME
 func event_handler():
 	match worldState:
 		worldEvent.DEFAULT:
-			if total > 5 && total < 15:
+			if total > 20 && total < 30:
 				musicPlayer.changeMusic(musicPlayer.musicEvent.HAPPY_HOUR)
 				worldState = firstEvent
-			elif(total > 25 && total < 40):
+			elif(total > 40 && total < 60):
 				musicPlayer.changeMusic(musicPlayer.musicEvent.GROOVY_TIME)
 				worldState = secondEvent
-			elif(total > 50 && total < 65):
+			elif(total > 75 && total < 82):
 				musicPlayer.changeMusic(musicPlayer.musicEvent.CLOSING_HOUR)
 				worldState = worldEvent.CLOSING_HOUR
 		firstEvent: # happy hour
-			if(total > 15):
+			if(total > 30):
 				musicPlayer.changeMusic(musicPlayer.musicEvent.DEFAULT)
 				worldState = worldEvent.DEFAULT
 		secondEvent: # groovy time
-			if(total > 40):
+			if(total > 60):
 				musicPlayer.changeMusic(musicPlayer.musicEvent.DEFAULT)
 				worldState = worldEvent.DEFAULT
 		worldEvent.CLOSING_HOUR:
-			if(total > 65):
+			if(total > 82):
 				worldState = worldEvent.END
 		worldEvent.END:
 			get_tree().change_scene("res://GameOverScreen.tscn")
