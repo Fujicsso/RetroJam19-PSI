@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pull The Lever (Personal Space Invader Theme).ogg-3d4f949a754855be6fd8d1a251266f08.oggstr"
+
+[deps]
+
+source_file="res://Music&SndEffects/Pull The Lever (Personal Space Invader Theme).ogg"
+dest_files=[ "res://.import/Pull The Lever (Personal Space Invader Theme).ogg-3d4f949a754855be6fd8d1a251266f08.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

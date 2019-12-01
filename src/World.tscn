@@ -323,6 +323,7 @@ animations = [ {
 } ]
 
 [node name="World" type="TileMap"]
+editor/display_folded = true
 position = Vector2( 525.823, 305.243 )
 tile_set = SubResource( 9 )
 cell_size = Vector2( 32, 32 )
