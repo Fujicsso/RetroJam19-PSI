@@ -341,83 +341,326 @@ script = ExtResource( 25 )
 [node name="AI" parent="." instance=ExtResource( 27 )]
 position = Vector2( 288.895, 233.005 )
 
+[node name="AI92" parent="." instance=ExtResource( 27 )]
+position = Vector2( 354.693, 193.005 )
+
+[node name="AI47" parent="." instance=ExtResource( 27 )]
+position = Vector2( 405.277, 224.819 )
+
+[node name="AI85" parent="." instance=ExtResource( 27 )]
+position = Vector2( 471.075, 184.819 )
+
 [node name="AI22" parent="." instance=ExtResource( 27 )]
 position = Vector2( 419.205, 181.454 )
+
+[node name="AI108" parent="." instance=ExtResource( 27 )]
+position = Vector2( 485.003, 141.454 )
+
+[node name="AI54" parent="." instance=ExtResource( 27 )]
+position = Vector2( 535.587, 173.268 )
+
+[node name="AI102" parent="." instance=ExtResource( 27 )]
+position = Vector2( 601.385, 133.268 )
 
 [node name="AI24" parent="." instance=ExtResource( 27 )]
 position = Vector2( -266.714, 132.766 )
 
+[node name="AI81" parent="." instance=ExtResource( 27 )]
+position = Vector2( -200.916, 92.766 )
+
+[node name="AI37" parent="." instance=ExtResource( 27 )]
+position = Vector2( -150.332, 124.58 )
+
+[node name="AI70" parent="." instance=ExtResource( 27 )]
+position = Vector2( -84.5341, 84.58 )
+
 [node name="AI25" parent="." instance=ExtResource( 27 )]
 position = Vector2( 323.263, -203.749 )
+
+[node name="AI84" parent="." instance=ExtResource( 27 )]
+position = Vector2( 389.061, -243.749 )
+
+[node name="AI40" parent="." instance=ExtResource( 27 )]
+position = Vector2( 439.645, -211.935 )
+
+[node name="AI64" parent="." instance=ExtResource( 27 )]
+position = Vector2( 505.443, -251.935 )
 
 [node name="AI2" parent="." instance=ExtResource( 27 )]
 position = Vector2( -489.055, 77.942 )
 
+[node name="AI82" parent="." instance=ExtResource( 27 )]
+position = Vector2( -423.257, 37.942 )
+
+[node name="AI38" parent="." instance=ExtResource( 27 )]
+position = Vector2( -372.673, 69.756 )
+
+[node name="AI71" parent="." instance=ExtResource( 27 )]
+position = Vector2( -306.875, 29.756 )
+
 [node name="AI15" parent="." instance=ExtResource( 27 )]
 position = Vector2( 487.556, 82.238 )
+
+[node name="AI86" parent="." instance=ExtResource( 27 )]
+position = Vector2( 553.354, 42.238 )
+
+[node name="AI41" parent="." instance=ExtResource( 27 )]
+position = Vector2( 603.938, 74.052 )
+
+[node name="AI105" parent="." instance=ExtResource( 27 )]
+position = Vector2( 669.736, 34.052 )
 
 [node name="AI11" parent="." instance=ExtResource( 27 )]
 position = Vector2( -348.721, -3.68095 )
 
+[node name="AI87" parent="." instance=ExtResource( 27 )]
+position = Vector2( -282.923, -43.6809 )
+
+[node name="AI42" parent="." instance=ExtResource( 27 )]
+position = Vector2( -232.339, -11.8669 )
+
+[node name="AI107" parent="." instance=ExtResource( 27 )]
+position = Vector2( -166.541, -51.8669 )
+
 [node name="AI18" parent="." instance=ExtResource( 27 )]
 position = Vector2( 627.891, 0.615005 )
+
+[node name="AI88" parent="." instance=ExtResource( 27 )]
+position = Vector2( 693.689, -39.385 )
+
+[node name="AI43" parent="." instance=ExtResource( 27 )]
+position = Vector2( 744.273, -7.57101 )
+
+[node name="AI93" parent="." instance=ExtResource( 27 )]
+position = Vector2( 810.071, -47.571 )
 
 [node name="AI13" parent="." instance=ExtResource( 27 )]
 position = Vector2( -612.205, 24.9587 )
 
+[node name="AI89" parent="." instance=ExtResource( 27 )]
+position = Vector2( -546.407, -15.0413 )
+
+[node name="AI44" parent="." instance=ExtResource( 27 )]
+position = Vector2( -495.823, 16.7727 )
+
+[node name="AI104" parent="." instance=ExtResource( 27 )]
+position = Vector2( -430.025, -23.2273 )
+
 [node name="AI20" parent="." instance=ExtResource( 27 )]
 position = Vector2( 364.406, 29.2547 )
+
+[node name="AI90" parent="." instance=ExtResource( 27 )]
+position = Vector2( 430.204, -10.7453 )
+
+[node name="AI45" parent="." instance=ExtResource( 27 )]
+position = Vector2( 480.788, 21.0687 )
+
+[node name="AI61" parent="." instance=ExtResource( 27 )]
+position = Vector2( 546.586, -18.9313 )
 
 [node name="AI3" parent="." instance=ExtResource( 27 )]
 position = Vector2( 685.914, 53.3353 )
 
+[node name="AI91" parent="." instance=ExtResource( 27 )]
+position = Vector2( 751.712, 13.3353 )
+
+[node name="AI46" parent="." instance=ExtResource( 27 )]
+position = Vector2( 802.296, 45.1493 )
+
+[node name="AI77" parent="." instance=ExtResource( 27 )]
+position = Vector2( 868.094, 5.14932 )
+
 [node name="AI4" parent="." instance=ExtResource( 27 )]
 position = Vector2( 32.5759, 306.825 )
+
+[node name="AI83" parent="." instance=ExtResource( 27 )]
+position = Vector2( 98.3738, 266.825 )
+
+[node name="AI39" parent="." instance=ExtResource( 27 )]
+position = Vector2( 148.958, 298.639 )
+
+[node name="AI66" parent="." instance=ExtResource( 27 )]
+position = Vector2( 214.756, 258.639 )
 
 [node name="AI21" parent="." instance=ExtResource( 27 )]
 position = Vector2( 162.886, 255.274 )
 
+[node name="AI59" parent="." instance=ExtResource( 27 )]
+position = Vector2( 228.684, 215.274 )
+
+[node name="AI29" parent="." instance=ExtResource( 27 )]
+position = Vector2( 279.268, 247.088 )
+
+[node name="AI58" parent="." instance=ExtResource( 27 )]
+position = Vector2( 345.066, 207.088 )
+
 [node name="AI23" parent="." instance=ExtResource( 27 )]
 position = Vector2( -523.033, 206.586 )
+
+[node name="AI62" parent="." instance=ExtResource( 27 )]
+position = Vector2( -457.235, 166.586 )
+
+[node name="AI30" parent="." instance=ExtResource( 27 )]
+position = Vector2( -406.651, 198.4 )
+
+[node name="AI55" parent="." instance=ExtResource( 27 )]
+position = Vector2( -340.853, 158.4 )
 
 [node name="AI26" parent="." instance=ExtResource( 27 )]
 position = Vector2( 66.9435, -129.929 )
 
+[node name="AI63" parent="." instance=ExtResource( 27 )]
+position = Vector2( 132.741, -169.929 )
+
+[node name="AI31" parent="." instance=ExtResource( 27 )]
+position = Vector2( 183.326, -138.115 )
+
+[node name="AI103" parent="." instance=ExtResource( 27 )]
+position = Vector2( 249.123, -178.115 )
+
 [node name="AI5" parent="." instance=ExtResource( 27 )]
 position = Vector2( 265.55, 38.9814 )
+
+[node name="AI95" parent="." instance=ExtResource( 27 )]
+position = Vector2( 331.348, -1.01859 )
+
+[node name="AI48" parent="." instance=ExtResource( 27 )]
+position = Vector2( 381.932, 30.7954 )
+
+[node name="AI76" parent="." instance=ExtResource( 27 )]
+position = Vector2( 447.73, -9.20459 )
 
 [node name="AI7" parent="." instance=ExtResource( 27 )]
 position = Vector2( 5.12939, -45.71 )
 
+[node name="AI80" parent="." instance=ExtResource( 27 )]
+position = Vector2( 70.9273, -85.71 )
+
+[node name="AI36" parent="." instance=ExtResource( 27 )]
+position = Vector2( 121.511, -53.896 )
+
+[node name="AI69" parent="." instance=ExtResource( 27 )]
+position = Vector2( 187.309, -93.896 )
+
 [node name="AI27" parent="." instance=ExtResource( 27 )]
 position = Vector2( -83.6535, 60.2566 )
+
+[node name="AI96" parent="." instance=ExtResource( 27 )]
+position = Vector2( -17.8556, 20.2566 )
+
+[node name="AI49" parent="." instance=ExtResource( 27 )]
+position = Vector2( 32.7285, 52.0706 )
+
+[node name="AI75" parent="." instance=ExtResource( 27 )]
+position = Vector2( 98.5264, 12.0706 )
 
 [node name="AI6" parent="." instance=ExtResource( 27 )]
 position = Vector2( 173.275, -287.057 )
 
+[node name="AI99" parent="." instance=ExtResource( 27 )]
+position = Vector2( 239.073, -327.057 )
+
+[node name="AI52" parent="." instance=ExtResource( 27 )]
+position = Vector2( 289.657, -295.243 )
+
+[node name="AI60" parent="." instance=ExtResource( 27 )]
+position = Vector2( 355.455, -335.243 )
+
 [node name="AI8" parent="." instance=ExtResource( 27 )]
 position = Vector2( -154.814, 237.885 )
+
+[node name="AI72" parent="." instance=ExtResource( 27 )]
+position = Vector2( -89.0161, 197.885 )
+
+[node name="AI33" parent="." instance=ExtResource( 27 )]
+position = Vector2( -38.4319, 229.699 )
+
+[node name="AI57" parent="." instance=ExtResource( 27 )]
+position = Vector2( 27.366, 189.699 )
 
 [node name="AI9" parent="." instance=ExtResource( 27 )]
 position = Vector2( -173.269, -272.703 )
 
+[node name="AI78" parent="." instance=ExtResource( 27 )]
+position = Vector2( -107.471, -312.703 )
+
+[node name="AI35" parent="." instance=ExtResource( 27 )]
+position = Vector2( -56.887, -280.889 )
+
+[node name="AI68" parent="." instance=ExtResource( 27 )]
+position = Vector2( 8.91095, -320.889 )
+
 [node name="AI10" parent="." instance=ExtResource( 27 )]
 position = Vector2( -429.589, -137.366 )
+
+[node name="AI98" parent="." instance=ExtResource( 27 )]
+position = Vector2( -363.791, -177.366 )
+
+[node name="AI51" parent="." instance=ExtResource( 27 )]
+position = Vector2( -313.207, -145.552 )
+
+[node name="AI79" parent="." instance=ExtResource( 27 )]
+position = Vector2( -247.409, -185.552 )
 
 [node name="AI16" parent="." instance=ExtResource( 27 )]
 position = Vector2( 547.022, -133.07 )
 
+[node name="AI100" parent="." instance=ExtResource( 27 )]
+position = Vector2( 612.82, -173.07 )
+
+[node name="AI53" parent="." instance=ExtResource( 27 )]
+position = Vector2( 663.404, -141.256 )
+
+[node name="AI67" parent="." instance=ExtResource( 27 )]
+position = Vector2( 729.202, -181.256 )
+
 [node name="AI12" parent="." instance=ExtResource( 27 )]
 position = Vector2( -289.255, -218.989 )
+
+[node name="AI73" parent="." instance=ExtResource( 27 )]
+position = Vector2( -223.457, -258.989 )
+
+[node name="AI34" parent="." instance=ExtResource( 27 )]
+position = Vector2( -172.873, -227.175 )
+
+[node name="AI101" parent="." instance=ExtResource( 27 )]
+position = Vector2( -107.075, -267.175 )
 
 [node name="AI19" parent="." instance=ExtResource( 27 )]
 position = Vector2( 687.357, -214.693 )
 
+[node name="AI56" parent="." instance=ExtResource( 27 )]
+position = Vector2( 753.155, -254.693 )
+
+[node name="AI28" parent="." instance=ExtResource( 27 )]
+position = Vector2( 803.739, -222.879 )
+
+[node name="AI106" parent="." instance=ExtResource( 27 )]
+position = Vector2( 869.537, -262.879 )
+
 [node name="AI14" parent="." instance=ExtResource( 27 )]
 position = Vector2( -552.739, -190.349 )
 
+[node name="AI97" parent="." instance=ExtResource( 27 )]
+position = Vector2( -486.941, -230.349 )
+
+[node name="AI50" parent="." instance=ExtResource( 27 )]
+position = Vector2( -436.357, -198.535 )
+
+[node name="AI74" parent="." instance=ExtResource( 27 )]
+position = Vector2( -370.559, -238.535 )
+
 [node name="AI17" parent="." instance=ExtResource( 27 )]
 position = Vector2( 423.872, -186.053 )
+
+[node name="AI65" parent="." instance=ExtResource( 27 )]
+position = Vector2( 489.67, -226.053 )
+
+[node name="AI32" parent="." instance=ExtResource( 27 )]
+position = Vector2( 540.254, -194.239 )
+
+[node name="AI94" parent="." instance=ExtResource( 27 )]
+position = Vector2( 606.052, -234.239 )
 
 [node name="Gaja" parent="." groups=[
 "Gaja",
