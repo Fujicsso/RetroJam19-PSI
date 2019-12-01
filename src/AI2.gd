@@ -9,11 +9,12 @@ const BAR_TIME = 2
 const MOVE_SPEED = 200
 # const TURN_ANGLE = PI / 64
 
-var goingToBar = false
+var goingToBar = true
 var reachedBar = 0
 var totalTime = 0
 var sinceLastEvent = 0
-
+var delta_X = 0
+var delta_Y = 0
 
 
 # Declare member variables here. Examples:
@@ -33,7 +34,6 @@ func _physics_process(delta):
 	var Move = Vector2()
 	var self_position = null
 	var body = get_node("body").get_overlapping_bodies()
-	sinceLastEvent += delta
     
 	time += delta
 	
@@ -48,36 +48,19 @@ func _physics_process(delta):
 				move_and_collide(Move * speed * delta)
 			else:
 				if goingToBar:
-					player_position = self.get_position()
-					var distance = player_position.distance_to(bar_position)
+					var distance = position.distance_to(bar_position)
 					if distance < 10:
 						reachedBar = totalTime
 						goingToBar = false
-					Move = bar_position - player_position
+					Move = bar_position - position
 					Move = Move.normalized()
-					move_and_collide(Move)
 			
 				else:
-					if sinceLastEvent > 5:
+					if sinceLastEvent > 1:
 						sinceLastEvent = 0
 						var chance = randi() % 101 + 1
 						if chance <= 5:
 							goingToBar = true
-							player_position = self.get_position()
-							var bar_position = Vector2()
-							if player_position.x < 0 and player_position.y < 0:
-								var bar = get_node("../Bar")
-								bar_position = bar.get_position()
-							elif player_position.x > 0 and player_position.y < 0:
-								var bar = get_node("../Bar2")
-								bar_position = bar.get_position()
-							elif player_position.x > 0 and player_position.y > 0:
-								var bar = get_node("../Bar3")
-								bar_position = bar.get_position()
-							elif player_position.x < 0 and player_position.y > 0:
-								var bar = get_node("../Bar4")
-								bar_position = bar.get_position()
-							print(bar_position)
 				if(time > 0.5):
 					time = 0
 					if(reverse == -1):
@@ -89,7 +72,7 @@ func _physics_process(delta):
 #					angle += reverse*(PI/4) * delta * 1.5
 #					global_rotation = angle + lastMoveAngle
 #				else:
-				angle += reverse*(PI/4) * delta * 1.5
+				angle += reverse*(PI/4) * delta * 0.8
 				global_rotation = angle
 	
 
